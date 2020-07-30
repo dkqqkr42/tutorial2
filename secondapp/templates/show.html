@@ -1,3 +1,30 @@
-{% for c in list %}
-    <p>{{ c.id }} {{ c.sido }} {{ c.name }} {{ c.medical }} {{ c.room }} {{ c.tel }} {{ c.address }}</p>
-{% endfor %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>sido</th>
+        <th>name</th>
+        <th>medical</th>
+        <th>room</th>
+        <th>tel</th>
+        <th>address</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for c in list %}
+      <tr>
+        <td>{{ c.id }}</td>
+        <td>{{ c.sido }}</td>
+        <td>{{ c.name }}</td>
+        <td>{{ c.medical }}</td>
+        <td>{{ c.room }}</td>
+        <td>{{ c.tel }}</td>
+        <td>{{ c.address }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+</table>
